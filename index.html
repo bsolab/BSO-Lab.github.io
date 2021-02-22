@@ -1,205 +1,664 @@
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="shortcut icon" href="/favicon.ico?20200614" /><title>
-    George happy birthday
-</title><link href="css/bme.css" rel="stylesheet" type="text/css" /><link href="css/jqueryslidemenu.css" rel="stylesheet" type="text/css" />
-    
-<script type="text/javascript" src="css/jquery.min.js"></script>
-<script type="text/javascript" src="css/jqueryslidemenu.js"></script>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-     
-    
-<script type="text/javascript">
-<!--
-    function MM_preloadImages() { //v3.0
-        var d = document; if (d.images) {
-            if (!d.MM_p) d.MM_p = new Array();
-            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
-                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
-        }
-    }
-    //-->
-</script>
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-44278221-1', 'nctu.edu.tw');
-    ga('send', 'pageview');
-    function MM_swapImgRestore() { //v3.0
-        var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
-    }
-    function MM_findObj(n, d) { //v4.01
-        var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
-            d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
-        }
-        if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
-        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
-        if (!x && d.getElementById) x = d.getElementById(n); return x;
-    }
-
-    function MM_swapImage() { //v3.0
-        var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2) ; i += 3)
-            if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
-    }
-</script>
-
-    
-    <script type="text/javascript">
-        $(function () {
-            GetBanner();
-        })
-        function GetBanner() {
-            $.ajax({
-                type: "POST",
-                url: "banner.ashx",
-                data: { mode: null },
-                success: function (xml) {
-                    $(xml).find("item").each(function () {
-                        var imgBannerSrc = $(this).attr('imgBannerSrc');
-                        var imgBannerAlt = $(this).attr('imgBannerAlt');
-                        var aBannerLink = $(this).attr('aBannerLink');
-                        $(".imgBanner").attr("src", imgBannerSrc);
-                        $(".imgBanner").attr("alt", imgBannerAlt);
-                        $(".imgBanner").attr("title", imgBannerAlt);
-                        $(".aBannerLink").attr("href", aBannerLink);
-
-                    });
-                   
-                    setTimeout("GetBanner();", 5000);
-                } 
-            });
-
-          
-        }
-
-    </script>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>George Happy Birthday</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./pic/bsolab-icon.ico" type="image/x-icon">
 
 </head>
-<body  onload="MM_preloadImages('images/more_iconv.gif')">
-  
-        <center>
-<a name="top" id="top"></a>
-<table width="1000" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td rowspan="2" align="right"><img src="images/banner01.gif?0126" id="imgTopBanner" alt="banner" width="674" height="152" /></td>
-    <td height="34" class="table_infor">
-        <a href='index.aspx?lang=c' class='inforlist'>回首頁</a>｜<a href='https://www.nycu.edu.tw/' target='_blank' class='inforlist'>陽明交大</a>｜<a href="https://www.ece.nctu.edu.tw/" target="_blank" class="inforlist">電機學院</a>｜<a href='index.aspx?lang=e' class='inforlist'>English</a>｜<a href="https://www.facebook.com/nycubme" target="_blank"><img src="images/facebook.gif" alt="facebook icon" width="67" height="18" align="absmiddle" /></a></td>
-  </tr>
-  <tr>
-    <td><img src="images/banner02.gif?0126" id="imgTopBanner2" alt="banner02" width="326" height="118" /></td>
-  </tr>
-</table>
-<div id="wrapper">
-  <table width="1000" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td colspan="2" valign="top" bgcolor="#FFFFFF"><div id="myslidemenu" class="jqueryslidemenu">
-          <ul><li><a href='news.aspx'>最新消息</a></li><li><a href='webContent3.aspx'>本所簡介</a><ul><li><a href='webContent3.aspx'>發展沿革</a></li><li><a href='webContent7.aspx'>發展重點</a><ul><li><a href='https://www.youtube.com/watch?v=072tU1tamd0'>生醫資訊</a></li><li><a href='https://www.youtube.com/watch?v=2Heb37a3Mpk&t=5s'>生醫電子與光電</a></li><li><a href='webContent11.aspx'>生醫應用</a></li></ul></li><li><a href='webContent85.aspx'>空間規劃</a><ul><li><a href='webContent85.aspx'>工程六館實驗室空間</a></li></ul></li><li><a href='webContent6.aspx'>本所位置</a></li><li><a href='webContent192.aspx'>各項榮耀</a></li><li><a href='https://www.bme.nctu.edu.tw/siteMap.aspx'>網站導覽</a><ul><li><a href='https://www.bme.nctu.edu.tw/siteMap.aspx'>網站地圖</a></li><li><a href='webContent1240.aspx'>網站資料開放宣告</a></li><li><a href='webContent1241.aspx'>個人資料保護暨資訊安全宣言</a></li><li><a href='webContent1242.aspx'>智慧財產權宣告</a></li></ul></li></ul></li><li><a href='webContent1254.aspx'>本所成員</a><ul><li><a href='webContent1254.aspx'>所辦公室</a><ul><li><a href='webContent1254.aspx'>現任所長</a></li><li><a href='webContent1255.aspx'>歷任所長</a></li><li><a href='webContent1256.aspx'>行政人員</a></li></ul></li><li><a href='webContent208.aspx'>本所教師</a><ul><li><a href='webContent208.aspx'>專任教師</a></li><li><a href='webContent87.aspx'>兼任教師</a></li><li><a href='webContent88.aspx'>合聘教師</a></li></ul></li><li><a href='webContent200.aspx'>本所學生</a></li><li><a href='webContent227.aspx'>聯絡我們</a></li></ul></li><li><a href='webContent154.aspx'>研究發展</a><ul><li><a href='webContent154.aspx'>研究計畫</a><ul><li><a href='webContent154.aspx'>林顯豐教授</a></li><li><a href='webContent155.aspx'>蔡德明教授</a></li><li><a href='webContent161.aspx'>許鉦宗教授</a></li><li><a href='webContent157.aspx'>陳榮治教授</a></li><li><a href='webContent158.aspx'>莊競程教授</a></li><li><a href='webContent159.aspx'>李博仁教授</a></li><li><a href='webContent160.aspx'>陳冠宇教授</a></li><li><a href='webContent1245.aspx'>林子恩教授</a></li><li><a href='webContent1246.aspx'>江柏翰教授</a></li></ul></li><li><a href='webContent139.aspx'>學術著作</a><ul><li><a href='webContent139.aspx'>林顯豐教授</a></li><li><a href='webContent138.aspx'>蔡德明教授</a></li><li><a href='webContent137.aspx'>許鉦宗教授</a></li><li><a href='webContent135.aspx'>陳榮治教授</a></li><li><a href='webContent134.aspx'>莊競程教授</a></li><li><a href='webContent133.aspx'>李博仁教授</a></li><li><a href='webContent132.aspx'>陳冠宇教授</a></li><li><a href='webContent1247.aspx'>林子恩教授</a></li><li><a href='webContent1248.aspx'>江柏翰教授</a></li></ul></li><li><a href='webContent19.aspx'>實驗室介紹</a></li></ul></li><li><a href='webContent60.aspx'>招生專區</a><ul><li><a href='webContent60.aspx'>本所招生特色</a></li><li><a href='webContent221.aspx'>碩班甄試入學</a><ul><li><a href='webContent221.aspx'>110可選指導教授</a></li><li><a href='webContent1244.aspx'>110學年甄試招生簡章</a></li><li><a href='webContent31.aspx'>表格及文件下載</a></li><li><a href='webContent220.aspx'>110指導教授介紹</a></li></ul></li><li><a href='webContent1251.aspx'>碩班考試入學</a><ul><li><a href='webContent1251.aspx'>110學年招生簡章</a></li><li><a href='webContent36.aspx'>表格及文件下載</a></li></ul></li><li><a href='webContent121.aspx'>109學年第2學期入學新生註冊入學須知(開學日110年2月22日)</a></li></ul></li><li><a href='webContent215.aspx'>規章辦法</a><ul><li><a href='webContent215.aspx'>修業規定</a><ul><li><a href='webContent215.aspx'>適用108-109學年入學</a></li><li><a href='webContent210.aspx'>適用107學年入學</a></li><li><a href='webContent182.aspx'>適用106學年入學</a></li><li><a href='webContent108.aspx'>適用105學年入學</a></li><li><a href='webContent94.aspx'>相關文件下載</a></li></ul></li><li><a href='webContent80.aspx'>畢業須知</a></li><li><a href='webContent1235.aspx'>畢業生資料表</a></li></ul></li><li><a href='webContent61.aspx'>課程介紹</a><ul><li><a href='webContent61.aspx'>教育目標與素養能力</a></li><li><a href='webContent42.aspx'>核心課程</a></li><li><a href='webContent1253.aspx'>課程介紹</a><ul><li><a href='webContent1253.aspx'>109學年第二學期課程</a></li><li><a href='webContent1233.aspx'>109學年第一學期課程</a></li><li><a href='webContent1227.aspx'>108學年第二學期課程</a></li><li><a href='webContent217.aspx'>108學年第一學期課程</a></li><li><a href='webContent211.aspx'>107學年第二學期課程</a></li><li><a href='webContent196.aspx'>107學年第一學期課程</a></li></ul></li><li><a href='webContent123.aspx'>環安教育訓練</a></li><li><a href='webContent218.aspx'>109選課指南(109.9更新)</a></li></ul></li><li><a href='webContent105.aspx'>校友專區</a><ul><li><a href='webContent105.aspx'>未來發展</a></li><li><a href='webContent223.aspx'>畢業生流向</a></li><li><a href='webContent104.aspx'>畢業生資料表</a></li></ul></li><li><a href='album.aspx'>活動剪影</a></li></ul>
-       
-    <br style="clear: left" />
-  </div>   </td>
-      </tr>
-    <tr>
-
-      <td width="770" valign="top" bgcolor="#FFFFFF" class="table-main01">
-   
-        
-
-
-
-             
-
-      
-     <table width="95%" border="0" cellspacing="0" cellpadding="0">
-          
-        <td><h2>
-            最新消息</h2></td>
-          
-      </table>
-    <div id="">
-      <div class="post">
-        <div class="story">
-            <span id="ContentPlaceHolder1_spanCate">
-            分類:
-  <select name="ctl00$ContentPlaceHolder1$ddlCate" id="ContentPlaceHolder1_ddlCate" class="ddlCate">
-    <option selected="selected" value="不限">不限</option>
-    <option value="1">最新消息</option>
-    <option value="2">一般消息</option>
-    <option value="3">演講公告</option>
-    <option value="4">課程資訊</option>
-    <option value="5">招生公告</option>
-    <option value="6">徵才公告</option>
-    <option value="7">競賽活動</option>
-    <option value="8">獎學金</option>
-    <option value="9">產業動態</option>
-
-</select>
-                </span>
-
-            標題:
-            <input name="ctl00$ContentPlaceHolder1$txtTitle" type="text" id="ContentPlaceHolder1_txtTitle" style="width:238px;" />
- 
-            <input type="submit" name="ctl00$ContentPlaceHolder1$btSel" value="查詢" id="ContentPlaceHolder1_btSel" class="btSel" />
-            <br />
-            <br />
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-               
-              <tr>
-                <td bgcolor="#999999"><table width="100%" border="0" cellpadding="0" cellspacing="1">
-                     <thead>
-                  <tr>
-                    <td bgcolor="#EEEEEE" class="table_h1"><div align="center"><strong>
-                        日期</strong></div></td>
-                    <td bgcolor="#EEEEEE" class="table_h1"><strong>留言</strong></td>
-                    <td id="ContentPlaceHolder1_tdCate" bgcolor="#EEEEEE" class="table_h1"><strong>姓名</strong></td>
-
-                    <td nowrap="nowrap" bgcolor="#EEEEEE" class="table_h1"><strong>點閱次數</strong></td>
-                  </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td height='35' align='center' bgcolor='#FFFFFF' class='table-left'>2021/02/21</td><td height='35' bgcolor='#FFFFFF' class='table-left'><a href='newsDetail192.aspx'>George生日快樂</a> </td><td height='35' align='center' nowrap='nowrap' bgcolor='#FFFFFF' class='table-left'>紀捷</td> <td height='35' align='center' nowrap='nowrap' bgcolor='#FFFFFF' class='table-left'>7198</td></tr><tr><td height='35' align='center' bgcolor='#f9f9f9' class='table-left'>2021/02/22</td><td height='35' bgcolor='#f9f9f9' class='table-left'><a href='newsDetail5526.aspx'>老師生日快樂喔</a> </td><td height='35' align='center' nowrap='nowrap' bgcolor='#f9f9f9' class='table-left'>陳薪羽</td> <td height='35' align='center' nowrap='nowrap' bgcolor='#f9f9f9' class='table-left'>31</td></tr>
-                     
-                        </tbody>
-                  </table></td>
-              </tr>
-            </table>
-            <p class="font1"><a href="news.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image17','','images/more_iconv.gif',1)"><img src="images/more_icon.gif" alt="更多消息" name="Image17" width="61" height="13" vspace="10" border="0" align="right" id="Image17" /></a></p>
-        </div>
-      </div></div>
-
-          </form>
-       </td>
-  </tr>
-    <tr>
-      <td colspan="2" align="center" valign="top" bgcolor="#FFFFFF">
-      <div id="footer">
-  <p id="legal">
-      Copyright &copy; 國立陽明交通大學 Biomedical Sensing & Oncology Lab<br />建議使用Internet Explorer 8~10, Google Chrome | 最佳螢幕解析度為: 1024 x 768</p>
-  <br>
-</div>
-      </td>
-      </tr>
-  </table>
-  
+<body>
+<!-- partial:index.partial.html -->
+<div class="app-container">
+  <div class="app-header">
+    <div class="app-header-left">
+      <span class="app-icon"></span>
+      <p class="app-name">George </p>
+      <div class="search-wrapper">
+        <input class="search-input" type="text" placeholder="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+          <defs></defs>
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="M21 21l-4.35-4.35"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="app-header-right">
+      <button class="mode-switch" title="Switch Theme">
+        <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+          <defs></defs>
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+      </button>
+      <button class="add-btn" title="Add New Project">
+        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <line x1="5" y1="12" x2="19" y2="12" /></svg>
+      </button>
+      <button class="notification-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+          <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+      </button>
+      <button class="profile-btn">
+        <img src="http://www.bme.nctu.edu.tw/download/professor/teacher52.gif" />
+        <span>George Chen</span>
+      </button>
+    </div>
+    <button class="messages-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
+    </button>
   </div>
+  <div class="app-content">
+    <div class="app-sidebar">
+      <a href="index.html" class="app-sidebar-link active">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" /></svg>
+      </a>
+      <a href="chat.html" class="app-sidebar-link ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      </a>
+      <a href="page3.html" class="app-sidebar-link">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+  <line x1="12" y1="19" x2="12" y2="23" />
+  <line x1="8" y1="23" x2="16" y2="23" />
+</svg>
 
-<!-- end #footer -->
+      </a>
+      <a href="page4.html" class="app-sidebar-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      </a>
+    </div>
+    <div class="projects-section">
+      <div class="projects-section-header">
+        <div class="zz">
+      <img src="./pic/bsolab.png" >
+    </div>
+        <p>RESEARCH</p>
+      </div>
+      <div class="projects-section-line">
+        <div class="projects-status">
+          <div class="item-status">
+            <span class="status-number">2021</span>
+            <span class="status-type">Publications</span>
+          </div>
+          <div class="item-status">
+            <span class="status-number">02</span>
+            <span class="status-type">Reads</span>
+          </div>
+          <div class="item-status">
+            <span class="status-number">29</span>
+            <span class="status-type">Citations</span>
+          </div>
+        </div>
+        <div class="view-actions">
+          <button class="view-btn list-view" title="List View">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+              <line x1="8" y1="6" x2="21" y2="6" />
+              <line x1="8" y1="12" x2="21" y2="12" />
+              <line x1="8" y1="18" x2="21" y2="18" />
+              <line x1="3" y1="6" x2="3.01" y2="6" />
+              <line x1="3" y1="12" x2="3.01" y2="12" />
+              <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
+          </button>
+          <button class="view-btn grid-view active" title="Grid View">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" /></svg>
+          </button>
+        </div>
+      </div>
+    
+      <div class="project-boxes jsGridView">
+        <div class="project-box-wrapper">
+          <div class="project-box" style="background-color: #fee4cb;">
+            <div class="project-box-header">
+              <span>張嘉軒 (Chia-Hsuan Chang)</span>
+              <div class="more-wrapper">
+                <button class="project-btn-more">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                    <circle cx="12" cy="12" r="1" />
+                    <circle cx="12" cy="5" r="1" />
+                    <circle cx="12" cy="19" r="1" /></svg>
+                </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        
+        <div class="project-box-footer">
+          
+          <div class="days-left" style="color: #ff942e;">
+            More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #e9e7fd;">
+        <div class="project-box-header">
+          <span>陳彥安 (Yen-An Chen)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #4f3ff0;">
+            More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box">
+        <div class="project-box-header">
+          <span>王瑜蓉 (Yu-Rong Wang)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔
+          </p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #096c86;">
+            More...
+          </div>
+        </div>
+      </div>
+    </div>
 
-</center>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #c8f7dc;">
+        <div class="project-box-header">
+          <span>李兆平 (Chao-Ping Lee)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #34c471;">
+            More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #d5deff;">
+        <div class="project-box-header">
+          <span>賴瑾君 (Chin-Chun Lai)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔  </p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #4067f9;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #ffd3e2;">
+        <div class="project-box-header">
+          <span>黃郁絜 (Yu-Jie Huang)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #df3670;">
+            More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #fbd9ec;">
+        <div class="project-box-header">
+          <span>佩奇</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #e1b6c5;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #66cdaa;">
+        <div class="project-box-header">
+          <span>吳怡潔 (Yi-Jie Wu)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #3cb98f;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #94dbff;">
+        <div class="project-box-header">
+          <span>李杰 (Jie Li)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #5fa8d2;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <script type="text/javascript">
-<!--
-    swfobject.registerObject("FlashID");
-    swfobject.registerObject("FlashID2");
-    //-->
-</script>
-  
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #ffc6ad;">
+        <div class="project-box-header">
+          <span>王秉濬 (Ping-Ghun Wang)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #f1ac93;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #e4eaf4;">
+        <div class="project-box-header">
+          <span>吳芷萱</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #92acd4;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #ade4ff;">
+        <div class="project-box-header">
+          <span>陳薪羽</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #16caff;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #ffa4b4;">
+        <div class="project-box-header">
+          <span>紀捷 (Jie Ji)</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔 </p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #ff5e86;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #afe3ff;">
+        <div class="project-box-header">
+          <span>簡上棋</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #86bae2;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-box-wrapper">
+      <div class="project-box" style="background-color: #d7efcc;">
+        <div class="project-box-header">
+          <span>王靖淇</span>
+          <div class="more-wrapper">
+            <button class="project-btn-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-box-content-header">
+          <p class="box-content-header">生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔生日快樂喔</p>
+        </div>
+        <div class="project-box-footer">
+          <div class="days-left" style="color: #9fb795;">
+           More...
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</div>
+<div class="messages-section">
+  <button class="messages-close">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+      <circle cx="12" cy="12" r="10" />
+      <line x1="15" y1="9" x2="9" y2="15" />
+      <line x1="9" y1="9" x2="15" y2="15" /></svg>
+  </button>
+  <div class="projects-section-header">
+    <p>Messages</p>
+  </div>
+  <div class="messages">
+<div class="message-box">
+      <img src="https://live.staticflickr.com/65535/50968274138_d3130a98cc_q.jpg" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">蔡英文(Tsai Ing-wen)</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-0">
+            <label for="star-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          要吃萊豬嗎
+        </p>
+        <p class="message-line time">
+          Dec, 12
+        </p>
+      </div>
+    </div>
+
+
+    <div class="message-box">
+      <img src="https://www.nycu.edu.tw/wp-content/uploads/2021/01/%E6%9E%97%E5%A5%87%E5%AE%8F%E8%80%81%E5%B8%AB%E7%85%A7%E7%89%87-1536x1024.jpg" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">林奇宏 (CHI HUNG LIN)</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-1">
+            <label for="star-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          明天來校長室領生日禮物
+        </p>
+        <p class="message-line time">
+          Dec, 12
+        </p>
+      </div>
+    </div>
+    <div class="message-box">
+      <img src="https://nctubsolab.weebly.com/uploads/1/3/1/6/131623033/published/c53a6f79-3c4c-4e4a-8e37-7d646e32824c.jpg?1601001668" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">吳怡潔 (Yi-Jie Wu)</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-2">
+            <label for="star-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          爽啦次啦
+        </p>
+        <p class="message-line time">
+          Dec, 12
+        </p>
+      </div>
+    </div>
+    <div class="message-box">
+      <img src="https://nctubsolab.weebly.com/uploads/1/3/1/6/131623033/published/1067892612.jpg?1586412648" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">王秉濬 (Ping-Ghun Wang)</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-3">
+            <label for="star-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          臉上的滄桑開始浮現啦～～
+        </p>
+        <p class="message-line time">
+          Dec, 12
+        </p>
+      </div>
+    </div>
+    <div class="message-box">
+      <img src="https://live.staticflickr.com/65535/50968972321_e2374b9d66_q.jpg">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">紀捷 (Jie Ji)</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-4">
+            <label for="star-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          老師祝你生日快樂！
+        </p>
+        <p class="message-line time">
+          Dec, 12
+        </p>
+      </div>
+    </div>
+  <div class="message-box">
+      <img src="https://nctubsolab.weebly.com/uploads/1/3/1/6/131623033/published/1217112396.jpg?1586415686" alt="profile image">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">李杰 (Jie Li)</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-5">
+            <label for="star-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          我有車有房
+        </p>
+        <p class="message-line time">
+          Dec, 12
+        </p>
+      </div>
+    </div>
+
+    <div class="message-box">
+      <img src="https://nctubsolab.weebly.com/uploads/1/3/1/6/131623033/published/afe26480-0787-43ef-acbf-0ee832ddf600.jpg?1586413291">
+      <div class="message-content">
+        <div class="message-header">
+          <div class="name">李兆平 (Chao-Ping Lee)</div>
+          <div class="star-checkbox">
+            <input type="checkbox" id="star-6">
+            <label for="star-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </label>
+          </div>
+        </div>
+        <p class="message-line">
+          我有車
+        </p>
+        <p class="message-line time">
+          Dec, 12
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
