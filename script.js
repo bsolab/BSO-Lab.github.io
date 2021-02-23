@@ -3,10 +3,10 @@ var sec = 10
 
 var timer = setInterval(function(){
   $(".bar").css("width",percent+"%")
-  percent+=0.5
+  percent+=0.3
   if (percent>=100){
 
-    $(".pageLoading").fadeOut(5000);
+    $(".pageLoading").fadeOut(1000);
   }
 },30)
 
